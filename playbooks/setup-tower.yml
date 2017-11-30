@@ -1,7 +1,0 @@
----
-# Install tower and run bootstrap on all the servers
-- hosts: towers
-  name: Install and bootstrap both towers
-  roles: 
-  - install-tower
-  - configure-tower
