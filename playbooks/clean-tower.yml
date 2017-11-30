@@ -1,0 +1,26 @@
+---
+# Clean up
+- hosts: towers
+  tasks:
+  - name: Remove packages
+    shell: yum autoremove -y ansible-tower postgres*
+
+  - name: Cleanup folders
+    file:
+      path: "{{ item }}"
+      state: absent
+    with_items:
+      - /var/lib/tower-bundle
+      - "{{ tower_dest }}/ansible-tower-setup-bundle-{{ tower_version }}"
+      - /var/lib/pgsql
+      - /var/lib/rabbitmq
+      - /etc/supervisord.d
+      - /etc/rabbitmq
+      - /root/.tower_cli.cfg
+      - "{{ tower_dest }}/add-jobs.sh"
+      - "{{ tower_dest }}/bootstrap-tower.sh"
+      - /etc/yum.repos.d/ansible-tower.repo
+      - /var/cache/yum/x86_64
+
+  - name: Remove Cache
+    command: yum clean all
