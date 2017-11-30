@@ -2,9 +2,8 @@
 # playbook to uninstall ansible tower
 - hosts: towers
   tasks:
-  - name: remove packages required during ansible tower installation and confirguration
+  - name: remove packages required during ansible tower installation and configuration
     shell: yum autoremove -y ansible-tower postgres*
-    become: true
   
   - name: clean directories
     file:
