@@ -3,4 +3,4 @@
 - hosts: towers
   name: Install a basic tower instance ready for configuration
   roles:
-    - install_tower_application
+    - tower_install_application
