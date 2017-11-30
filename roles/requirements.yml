@@ -1,1 +1,4 @@
-#TODO
+---
+- name: tower_install_application
+  src: https://github.com/prometeo-cloud/tower_install_application.git
+  scm: git

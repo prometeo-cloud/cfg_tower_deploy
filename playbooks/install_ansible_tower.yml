@@ -1,0 +1,6 @@
+---
+# Install basic tower to run on the required servers
+- hosts: towers
+  name: Install a basic tower instance ready for configuration
+  roles:
+    - install_ansible_tower
