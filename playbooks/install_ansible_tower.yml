@@ -3,4 +3,4 @@
 - hosts: towers
   name: Install a basic tower instance ready for configuration
   roles:
-    - install_ansible_tower
+    - install_tower_application
