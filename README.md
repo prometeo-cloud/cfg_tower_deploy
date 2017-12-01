@@ -16,10 +16,10 @@ uninstall_ansible_tower role<br />
 Preconfigured RHEL 7.x machine<br />
 
 ## Testing the role:
----<br />
-- hosts: towers<br />
-  roles:<br />
-  name: Install and configures a tower based upon requirements gathered. <br />
-     - install_ansible_tower<br />
-     - tower_configure_application<br />
-     
+```---
+- hosts: towers
+  name: Install and configures a tower based upon requirements gathered. 
+  roles:
+    - install_ansible_tower
+    - tower_configure_application
+```     
