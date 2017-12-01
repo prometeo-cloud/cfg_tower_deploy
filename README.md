@@ -18,10 +18,10 @@ Feature:</br>
 - Preconfigured RHEL 7.x machine</br>
 
 ## Testing the role:
-'''
-- hosts: towers
+```---
+# - hosts: towers
   name: Install and configures a tower based upon requirements gathered. 
   roles:
     - install_ansible_tower
     - tower_configure_application
-'''
+```
