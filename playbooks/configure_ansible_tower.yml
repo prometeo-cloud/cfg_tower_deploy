@@ -9,10 +9,10 @@
     run_once: true
     fail: msg=" please ensure tower is installed and running"
     uri:
-      url: "https://{{ groups['towers-pri'][0] }}/api/"
+      url: "https://{{ ansible_host }}/api/"
       validate_certs: false
       status_code: 200  
 
   - name: Configure ansible tower (based upon pre defined specifications)
     roles:
-      - configure_ansible_tower
+      - tower_configure_application

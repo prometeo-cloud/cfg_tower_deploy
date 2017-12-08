@@ -4,3 +4,4 @@
   name: Install a basic tower instance ready for configuration
   roles:
     - tower_install_application
+    - tower_configure_application
