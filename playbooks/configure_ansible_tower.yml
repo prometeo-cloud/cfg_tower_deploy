@@ -2,17 +2,5 @@
 # Configiures an already installed tower using a configure_tower role
 - hosts: towers
   gather_facts: false
-  pre_tasks:
-  - name: Check if the Primary server is up
-    ignore_errors: no
-    register: primary_status
-    run_once: true
-    fail: msg=" please ensure tower is installed and running"
-    uri:
-      url: "https://{{ ansible_host }}/api/"
-      validate_certs: false
-      status_code: 200  
-
-  - name: Configure ansible tower (based upon pre defined specifications)
-    roles:
-      - tower_configure_application
+  roles:
+    - tower_configure_application
